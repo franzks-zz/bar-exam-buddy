@@ -1,0 +1,3 @@
+Polymer('bar-exam-buddy', {
+
+});

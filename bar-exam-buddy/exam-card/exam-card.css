@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  height: 120px;
+  width: 200px;
+  margin: 25px auto 25px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#title {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 65px;
+  font-size: 20px;
+}
+
+paper-fab {
+  position: absolute;
+  bottom: -15px;
+  left: 72px;
+}

@@ -1,0 +1,29 @@
+:host {
+  font-family:"RobotoDraft",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  margin: 0;
+  height: 100%;
+}
+
+core-header-panel {
+  height: 100%;
+}
+
+.core-header {
+  color: #FFF;
+  background-color: #3e50b4 !important;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  padding: 0 35px;
+  transition: height 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+.core-header.medium-tall {
+  height: 200px;
+  line-height: 200px;
+  font-size: 30px;
+}
+
+.content {
+}

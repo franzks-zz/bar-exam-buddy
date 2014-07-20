@@ -1,0 +1,49 @@
+<link href="../bower_components/polymer/polymer.html" rel="import">
+<link href="../bower_components/font-roboto/roboto.html" rel="import">
+<link href="../bower_components/core-header-panel/core-header-panel.html" rel="import">
+
+<link href="exam-card/exam-card.html" rel="import">
+
+<polymer-element name="bar-exam-buddy">
+  <template>
+    <link rel="stylesheet" href="../bower_components/foundation/css/normalize.css">
+    <link rel="stylesheet" href="../bower_components/foundation/css/foundation.css">
+    <link href="bar-exam-buddy.css" rel="stylesheet">
+    
+    <core-header-panel mode="waterfall-tall" tallClass="medium-tall" layout vertical>
+      <div class="core-header">Bar Exam Buddy</div>
+      <div class="content" flex>
+        <div class="row">
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Civil Law"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Labor Law"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Mercantile Law"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Criminal Law"></exam-card>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Political Law"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Taxation"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="Remedial Law"></exam-card>
+          </div>
+          <div class="large-3 medium-6 columns">
+            <exam-card examCardTitle="International Law"></exam-card>
+          </div>
+        </div>
+      </div>
+    </core-header-panel>
+
+  </template>
+  <script type="text/javascript" src="bar-exam-buddy.js"></script>
+</polymer-element>

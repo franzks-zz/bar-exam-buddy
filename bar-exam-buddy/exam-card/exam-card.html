@@ -1,0 +1,15 @@
+<link href="../../bower_components/polymer/polymer.html" rel="import">
+<link href="../../bower_components/core-icons/core-icons.html" rel="import">
+<link href="../../bower_components/paper-fab/paper-fab.html" rel="import">
+<link href="../../bower_components/paper-shadow/paper-shadow.html" rel="import">
+
+
+<polymer-element name="exam-card" attributes="examCardTitle">
+  <template>
+    <link href="exam-card.css" rel="stylesheet">
+    <paper-shadow z="1"></paper-shadow>
+    <span id="title">{{examCardTitle}}</span>
+    <paper-fab icon="chevron-right"></paper-fab>
+  </template>
+  <script type="text/javascript" src="exam-card.js"></script>
+</polymer-element>
