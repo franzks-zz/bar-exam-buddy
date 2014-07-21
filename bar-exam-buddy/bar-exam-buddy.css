@@ -2,11 +2,11 @@
   font-family:"RobotoDraft",Helvetica,Arial,sans-serif;
   font-weight: 300;
   margin: 0;
-  height: 100%;
 }
 
 core-header-panel {
   height: 100%;
+  position: static;
 }
 
 .core-header {
