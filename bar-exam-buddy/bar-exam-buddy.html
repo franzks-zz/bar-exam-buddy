@@ -1,7 +1,9 @@
 <link href="../bower_components/polymer/polymer.html" rel="import">
 <link href="../bower_components/font-roboto/roboto.html" rel="import">
+<link href="../bower_components/core-animated-pages/core-animated-pages.html" rel="import">
 <link href="../bower_components/core-header-panel/core-header-panel.html" rel="import">
-<link href="../bower_components/core-pages/core-pages.html" rel="import">
+<link href="../bower_components/core-animated-pages/transitions/slide-up.html" rel="import">
+<link href="../bower_components/core-animated-pages/transitions/slide-down.html" rel="import">
 
 <link href="exam-card/exam-card.html" rel="import">
 
@@ -13,41 +15,45 @@
     
     <core-header-panel mode="waterfall-tall" tallClass="medium-tall" flex layout vertical>
       <div class="core-header">Bar Exam Buddy</div>
-      <core-pages id="pages" selected="0">
-        <div>
-          <div class="row">
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
+      <core-animated-pages id="pages" selected="0" transitions="slide-up slide-down">
+        <section>
+          <div slide-down>
+            <div class="row">
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
             </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}"></exam-card>
+            <div class="row">
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
+              <div class="large-3 medium-6 columns">
+                <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}"></exam-card>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
-            <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}"></exam-card>
-            </div>
+        </section>
+        <section>
+          <div slide-up>
+            EXAM FORM 
           </div>
-        </div>
-        <div>
-          EXAM FORM 
-        </div>
-      </core-pages>
+        </section>
+      </core-animated-pages>
     </core-header-panel>
 
   </template>
