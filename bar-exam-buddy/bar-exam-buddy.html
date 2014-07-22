@@ -1,8 +1,7 @@
 <link href="../bower_components/polymer/polymer.html" rel="import">
 <link href="../bower_components/font-roboto/roboto.html" rel="import">
 <link href="../bower_components/core-animated-pages/core-animated-pages.html" rel="import">
-<link href="../bower_components/core-animated-pages/transitions/slide-up.html" rel="import">
-<link href="../bower_components/core-animated-pages/transitions/slide-down.html" rel="import">
+<link href="../bower_components/core-animated-pages/transitions/cross-fade.html" rel="import">
 <link href="../bower_components/core-header-panel/core-header-panel.html" rel="import">
 <link href="../bower_components/paper-fab/paper-fab.html" rel="import">
 
@@ -19,9 +18,9 @@
       <div class="core-header">
         <div class="row"><div class="large-12 columns">Bar Exam Buddy</div></div>
       </div>
-      <core-animated-pages id="pages" selected="0" transitions="slide-up slide-down">
+      <core-animated-pages id="pages" selected="0" transitions="cross-fade">
         <section>
-          <div slide-up>
+          <div cross-fade>
             <div class="row">
               <div class="large-3 medium-6 columns">
                 <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
@@ -53,7 +52,7 @@
           </div>
         </section>
         <section>
-          <div slide-down>
+          <div cross-fade>
             <div class="row">
               <div class="small-3 columns">
                 <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}"></paper-fab>
