@@ -4,12 +4,12 @@
 <link href="../../bower_components/paper-shadow/paper-shadow.html" rel="import">
 
 
-<polymer-element name="exam-card" attributes="examCardTitle">
+<polymer-element name="exam-card" attributes="examCardTitle selectedPage">
   <template>
     <link href="exam-card.css" rel="stylesheet">
     <paper-shadow z="1"></paper-shadow>
     <span id="title">{{examCardTitle}}</span>
-    <paper-fab icon="chevron-right"></paper-fab>
+    <paper-fab icon="chevron-right" on-tap="{{ fabOnTap }}"></paper-fab>
   </template>
   <script type="text/javascript" src="exam-card.js"></script>
 </polymer-element>
