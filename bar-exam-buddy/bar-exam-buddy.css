@@ -24,3 +24,7 @@ core-header-panel {
   line-height: 200px;
   font-size: 30px;
 }
+
+#fab-back {
+  margin-top: 20px;
+}
