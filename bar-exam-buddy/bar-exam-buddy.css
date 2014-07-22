@@ -15,7 +15,7 @@ core-header-panel {
   height: 60px;
   line-height: 60px;
   font-size: 18px;
-  padding: 0 35px;
+  padding: 0 20px;
   transition: height 0.2s, font-size 0.2s, line-height 0.2s;
 }
 
