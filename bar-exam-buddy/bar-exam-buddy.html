@@ -2,6 +2,7 @@
 <link href="../bower_components/font-roboto/roboto.html" rel="import">
 <link href="../bower_components/core-animated-pages/core-animated-pages.html" rel="import">
 <link href="../bower_components/core-animated-pages/transitions/cross-fade.html" rel="import">
+<link href="../bower_components/core-animated-pages/transitions/slide-down.html" rel="import">
 <link href="../bower_components/core-header-panel/core-header-panel.html" rel="import">
 <link href="../bower_components/paper-fab/paper-fab.html" rel="import">
 
@@ -19,34 +20,34 @@
       <div class="core-header">
         <div class="row"><div class="large-12 columns">Bar Exam Buddy</div></div>
       </div>
-      <core-animated-pages id="pages" selected="0" transitions="cross-fade">
+      <core-animated-pages id="pages" selected="0" transitions="hero-transition slide-down">
         <section>
-          <div class="row" cross-fade>
+          <div class="row" slide-down>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
           </div>
-          <div class="row" cross-fade>
+          <div class="row" slide-down>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
             <div class="large-3 medium-6 columns">
-              <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}"></exam-card>
+              <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}" hero></exam-card>
             </div>
           </div>
         </section>
@@ -56,7 +57,7 @@
               <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}" cross-fade></paper-fab>
             </div>
             <div class="small-10 columns">
-              <exam-form></exam-form> 
+              <exam-form selectedHero="{{ selectedHero }}"></exam-form> 
             </div>
           </div>
         </section>
