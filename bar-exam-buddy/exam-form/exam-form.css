@@ -1,0 +1,24 @@
+#question-card {
+  margin: 15px;
+  padding: 28px;
+  text-align: justify;
+}
+
+#question-card span {
+  display: inline-block;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.choice {
+  padding: 10px;
+}
+
+.choice:hover {
+  background-color: #EEE;
+}
+
+#fab-back {
+  position: absolute;
+  left: -20px;
+}
