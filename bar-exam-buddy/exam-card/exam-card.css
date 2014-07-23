@@ -1,5 +1,6 @@
 :host {
   display: block;
+  background-color: #FFF;
   height: 120px;
   width: 200px;
   margin: 25px auto 25px auto;
