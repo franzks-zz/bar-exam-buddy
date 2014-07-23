@@ -1,10 +1,8 @@
 <link href="../bower_components/polymer/polymer.html" rel="import">
 <link href="../bower_components/font-roboto/roboto.html" rel="import">
 <link href="../bower_components/core-animated-pages/core-animated-pages.html" rel="import">
-<link href="../bower_components/core-animated-pages/transitions/cross-fade.html" rel="import">
 <link href="../bower_components/core-animated-pages/transitions/slide-down.html" rel="import">
 <link href="../bower_components/core-header-panel/core-header-panel.html" rel="import">
-<link href="../bower_components/paper-fab/paper-fab.html" rel="import">
 
 
 <link href="exam-card/exam-card.html" rel="import">
@@ -53,11 +51,8 @@
         </section>
         <section>
           <div class="row">
-            <div class="small-2 columns">
-              <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}" cross-fade></paper-fab>
-            </div>
-            <div class="small-10 columns">
-              <exam-form selectedHero="{{ selectedHero }}"></exam-form> 
+            <div class="small-12 columns">
+              <exam-form fabBackOnTap="{{ fabBackOnTap }}" selectedPage="{{ selectedPage }}" selectedHero="{{ selectedHero }}"></exam-form> 
             </div>
           </div>
         </section>

@@ -1,12 +1,15 @@
 <link href="../../bower_components/polymer/polymer.html" rel="import">
+<link href="../../bower_components/paper-fab/paper-fab.html" rel="import">
 <link href="../../bower_components/paper-shadow/paper-shadow.html" rel="import">
 
-<polymer-element name="exam-form" attributes="selectedHero">
+<polymer-element name="exam-form" attributes="fabBackOnTap selectedPage selectedHero">
   <template>
     <link href="exam-form.css" rel="stylesheet">
     
     <div hero-id="{{ selectedHero }}" hero>
       <paper-shadow z="1"></paper-shadow>
+      
+      <paper-fab id="fab-back" class="mini" icon="chevron-left" on-tap="{{ fabBackOnTap }}"></paper-fab>
       <span>Question</span>
       <div>
           <p>Choice 1</p>
