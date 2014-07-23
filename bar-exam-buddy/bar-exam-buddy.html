@@ -7,6 +7,7 @@
 
 
 <link href="exam-card/exam-card.html" rel="import">
+<link href="exam-form/exam-form.html" rel="import">
 
 <polymer-element name="bar-exam-buddy">
   <template>
@@ -55,6 +56,7 @@
               <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}" cross-fade></paper-fab>
             </div>
             <div class="small-10 columns">
+              <exam-form></exam-form> 
             </div>
           </div>
         </section>
