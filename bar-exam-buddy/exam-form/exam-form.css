@@ -10,12 +10,8 @@
   margin-bottom: 10px;
 }
 
-.choice {
-  padding: 10px;
-}
-
-.choice:hover {
-  background-color: #EEE;
+paper-radio-button:hover {
+  color: #AAA;
 }
 
 #fab-back {
