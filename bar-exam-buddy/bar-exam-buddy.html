@@ -20,43 +20,41 @@
       </div>
       <core-animated-pages id="pages" selected="0" transitions="cross-fade">
         <section>
-          <div cross-fade>
-            <div class="row">
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
+          <div class="row" cross-fade>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Civil Law" selectedPage="{{ selectedPage }}"></exam-card>
             </div>
-            <div class="row">
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
-              <div class="large-3 medium-6 columns">
-                <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}"></exam-card>
-              </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Labor Law" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Mercantile Law" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Criminal Law" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+          </div>
+          <div class="row" cross-fade>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Political Law" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Taxation" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="Remedial Law" selectedPage="{{ selectedPage }}"></exam-card>
+            </div>
+            <div class="large-3 medium-6 columns">
+              <exam-card examCardTitle="International Law" selectedPage="{{ selectedPage }}"></exam-card>
             </div>
           </div>
         </section>
         <section>
-          <div cross-fade>
-            <div class="row">
-              <div class="small-3 columns">
-                <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}"></paper-fab>
-              </div>
+          <div class="row">
+            <div class="small-2 columns">
+              <paper-fab id="fab-back" icon="chevron-left" on-tap="{{ fabBackOnTap }}" cross-fade></paper-fab>
+            </div>
+            <div class="small-10 columns">
             </div>
           </div>
         </section>
