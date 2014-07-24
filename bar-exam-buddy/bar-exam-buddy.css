@@ -4,6 +4,34 @@
   margin: 0;
 }
 
+/*** UNIVERSAL PAPER ELEMENT STYLES ***/
+
+:host /deep/ paper-fab {
+  background: #3e50b4;
+  color: #FFF;
+}
+
+:host /deep/ paper-fab:hover {
+  background: #586ACE;
+}
+
+:host /deep/ paper-button[raisedButton].colored {
+  background: #3e50b4;
+  color: #fff;
+}
+
+:host /deep/ paper-button[raisedButton].colored:hover {
+  background: #586ACE;
+  color: #fff;
+}
+
+:host /deep/ paper-button[raisedButton].colored #ripple,
+:host /deep/ paper-button[raisedButton].colored::shadow #ripple {
+  color: #7183E7;
+}
+
+/*** HEADER ***/
+
 core-header-panel {
   position: static;
 }
@@ -22,15 +50,6 @@ core-header-panel {
   height: 200px;
   line-height: 200px;
   font-size: 30px;
-}
-
-:host /deep/ paper-fab {
-  background: #4285f4;
-  color: #FFF;
-}
-
-:host /deep/ paper-fab:hover {
-  background: #5C9FFF;
 }
 
 #fab-back {

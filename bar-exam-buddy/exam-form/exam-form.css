@@ -18,25 +18,6 @@ paper-radio-button:hover {
   margin-top: 10px;
 }
 
-#btn-answer.colored {
-  color: #4285f4;
-  fill: #4285f4;
-}
-
-#btn-answer[raisedButton].colored {
-  background: #4285f4;
-  color: #fff;
-}
-
-#btn-answer[raisedButton].colored #ripple,
-#btn-answer[raisedButton].colored::shadow #ripple {
-  color: #2a56c6;
-}
-
-#btn-answer[raisedButton].colored #focusBg,
-#btn-answer[raisedButton].colored::shadow #focusBg {
-  background: #3367d6;
-}
 
 #fab-back {
   position: absolute;
