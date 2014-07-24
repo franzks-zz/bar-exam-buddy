@@ -14,12 +14,6 @@ paper-radio-button:hover {
   color: #AAA;
 }
 
-#fab-prev-question,
-#fab-next-question {
-  background: #4285f4;
-}
-
-
 #btn-answer {
   margin-top: 10px;
 }

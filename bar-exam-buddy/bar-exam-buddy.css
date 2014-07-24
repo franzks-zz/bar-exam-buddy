@@ -25,7 +25,12 @@ core-header-panel {
 }
 
 :host /deep/ paper-fab {
+  background: #4285f4;
   color: #FFF;
+}
+
+:host /deep/ paper-fab:hover {
+  background: #5C9FFF;
 }
 
 #fab-back {
