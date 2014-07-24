@@ -24,6 +24,10 @@ core-header-panel {
   font-size: 30px;
 }
 
+:host /deep/ paper-fab {
+  color: #FFF;
+}
+
 #fab-back {
   margin-top: 20px;
 }
