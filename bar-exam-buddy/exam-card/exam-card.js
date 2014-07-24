@@ -5,7 +5,6 @@ Polymer('exam-card', {
   },
   fabOnTap: function(e) {
     this.selectedPage = 1;
-    console.log(this.getAttribute('hero-id'));
     this.selectedHero = this.getAttribute('hero-id');
   },
 });
