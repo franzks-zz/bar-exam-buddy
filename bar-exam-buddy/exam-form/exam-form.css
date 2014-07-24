@@ -1,13 +1,30 @@
 #question-card {
   margin: 15px;
   padding: 28px;
-  text-align: justify;
 }
 
-#question-card span {
-  display: inline-block;
+#fab-back {
+  position: absolute;
+  left: -20px;
+}
+
+#question-number {
+  line-height: 10px;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+#fab-prev-question {
+  margin-right: 10px;
+}
+
+#question {
+  margin-top: 10px;
   line-height: 30px;
-  margin-bottom: 10px;
+}
+
+paper-radio-button::shadow #radioLabel {
+  line-height: 30px;
 }
 
 paper-radio-button:hover {
@@ -18,8 +35,3 @@ paper-radio-button:hover {
   margin-top: 10px;
 }
 
-
-#fab-back {
-  position: absolute;
-  left: -20px;
-}
