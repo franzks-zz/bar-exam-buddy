@@ -1,6 +1,5 @@
 Polymer('exam-form', {
   questionCurrent: 0,
-  questionTotal: 0,
   ready: function() {
     this.$.xhr.request({
       url: 'dummy-questions.json',
@@ -10,7 +9,6 @@ Polymer('exam-form', {
   arrQuestions: [],
   onQuestionsLoaded: function(result) {
     this.arrQuestions = eval(result);
-    this.questionTotal = this.arrQuestions.length;
   },
   fabPrevOnTap: function(e) {
   },

@@ -15,7 +15,7 @@
       
       <paper-fab id="fab-back" class="mini" icon="chevron-left" on-tap="{{ fabBackOnTap }}"></paper-fab>
       <div layout horizontal center>
-        <span id="question-number" flex>Question #: {{questionCurrent}}/{{questionTotal}}</span>
+        <span id="question-number" flex>Question #: {{questionCurrent}}/{{arrQuestions.length}}</span>
         <paper-fab id="fab-prev-question" class="mini" icon="arrow-back" on-tap="{{ fabPrevOnTap }}"></paper-fab>
         <paper-fab id="fab-next-question" class="mini" icon="arrow-forward" on-tap="{{ fabNextOnTap }}"></paper-fab>
       </div>
