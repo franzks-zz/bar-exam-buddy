@@ -27,11 +27,25 @@ paper-radio-button::shadow #radioLabel {
   line-height: 30px;
 }
 
-paper-radio-button:hover {
-  color: #AAA;
+paper-radio-button {
+  color: #000;
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  transition: color 250ms linear;
 }
 
-#btn-submit {
+paper-radio-button:hover {
+  color: #AAA;
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
+#btn-submit-answer {
   margin-top: 10px;
 }
 
