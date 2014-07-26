@@ -31,13 +31,13 @@ Polymer('exam-form', {
     labels[rand[2]].label = question.choice2;
     labels[rand[3]].label = question.choice3;
   },
-  fabPrevOnTap: function() {
+  onFabPrevTap: function() {
     if(this.questionCurrent>0) {
       this.questionCurrent--;
       this.loadQuestion(this.questionCurrent);
     }
   },
-  fabNextOnTap: function() {
+  onFabNextTap: function() {
     if(this.questionCurrent<this.arrQuestions.length-1) {
       this.questionCurrent++;
       this.loadQuestion(this.questionCurrent);

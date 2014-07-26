@@ -3,7 +3,7 @@ Polymer('exam-card', {
   ready: function() {
     this.setAttribute('hero-id',this.examCardTitle);
   },
-  fabOnTap: function(e) {
+  onFabStartExamTap: function(e) {
     this.selectedPage = 1;
     this.selectedHero = this.getAttribute('hero-id');
   },

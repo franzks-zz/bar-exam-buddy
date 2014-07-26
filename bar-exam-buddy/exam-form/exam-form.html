@@ -5,7 +5,7 @@
 <link href="../../bower_components/paper-radio-group/paper-radio-group.html" rel="import">
 <link href="../../bower_components/paper-shadow/paper-shadow.html" rel="import">
 
-<polymer-element name="exam-form" attributes="fabBackOnTap selectedPage selectedHero">
+<polymer-element name="exam-form" attributes="onFabBackTap selectedPage selectedHero">
   <template>
     <core-xhr id="xhr"></core-xhr>
     <link href="exam-form.css" rel="stylesheet">
@@ -13,11 +13,11 @@
     <div id="question-card" hero-id="{{ selectedHero }}" layout vertical hero>
       <paper-shadow z="1"></paper-shadow>
       
-      <paper-fab id="fab-back" class="mini" icon="chevron-left" on-tap="{{ fabBackOnTap }}"></paper-fab>
+      <paper-fab id="fab-back" class="mini" icon="chevron-left" on-tap="{{ onFabBackTap }}"></paper-fab>
       <div layout horizontal center>
         <span id="question-number" flex>Question #: {{questionCurrent+1}}/{{arrQuestions.length}}</span>
-        <paper-fab id="fab-prev-question" class="mini" icon="arrow-back" on-tap="{{ fabPrevOnTap }}"></paper-fab>
-        <paper-fab id="fab-next-question" class="mini" icon="arrow-forward" on-tap="{{ fabNextOnTap }}"></paper-fab>
+        <paper-fab id="fab-prev-question" class="mini" icon="arrow-back" on-tap="{{ onFabPrevTap }}"></paper-fab>
+        <paper-fab id="fab-next-question" class="mini" icon="arrow-forward" on-tap="{{ onFabNextTap }}"></paper-fab>
       </div>
       
       <span id="question">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>

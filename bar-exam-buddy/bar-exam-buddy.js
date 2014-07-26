@@ -4,7 +4,7 @@ Polymer('bar-exam-buddy', {
   selectedPageChanged: function() {
     this.$.pages.selected = this.selectedPage;
   },
-  fabBackOnTap: function(e) {
+  onFabBackTap: function(e) {
     this.selectedPage = 0;
   },
 });
