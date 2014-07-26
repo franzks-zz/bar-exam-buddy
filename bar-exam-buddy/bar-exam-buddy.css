@@ -7,12 +7,17 @@
 /*** UNIVERSAL PAPER ELEMENT STYLES ***/
 
 :host /deep/ paper-fab {
-  background: #3e50b4;
+  background-color: #3e50b4;
   color: #FFF;
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 :host /deep/ paper-fab:hover {
-  background: #586ACE;
+  background-color: #586ACE;
   -webkit-transition: background-color 250ms linear;
   -moz-transition: background-color 250ms linear;
   -o-transition: background-color 250ms linear;
@@ -21,12 +26,17 @@
 }
 
 :host /deep/ paper-button[raisedButton].colored {
-  background: #3e50b4;
+  background-color: #3e50b4;
   color: #fff;
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 :host /deep/ paper-button[raisedButton].colored:hover {
-  background: #586ACE;
+  background-color: #586ACE;
   -webkit-transition: background-color 250ms linear;
   -moz-transition: background-color 250ms linear;
   -o-transition: background-color 250ms linear;
