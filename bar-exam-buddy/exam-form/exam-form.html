@@ -21,11 +21,11 @@
       </div>
       
       <span id="question"></span>
-      <paper-radio-group>
-        <paper-radio-button id="choice1"></paper-radio-button>
-        <paper-radio-button id="choice2"></paper-radio-button>
-        <paper-radio-button id="choice3"></paper-radio-button>
-        <paper-radio-button id="choice4"></paper-radio-button>
+      <paper-radio-group selected="{{choiceSelected}}">
+        <paper-radio-button name="0" id="choice1" on-tap="{{ onChoiceChanged }}"></paper-radio-button>
+        <paper-radio-button name="1" id="choice2" on-tap="{{ onChoiceChanged }}"></paper-radio-button>
+        <paper-radio-button name="2" id="choice3" on-tap="{{ onChoiceChanged }}"></paper-radio-button>
+        <paper-radio-button name="3" id="choice4" on-tap="{{ onChoiceChanged }}"></paper-radio-button>
       </paper-radio-group>
       <paper-button id="btn-submit-answer" class="colored" raisedButton label="SUBMIT ANSWER" self-center on-tap="{{ onBtnSubmitAnswerTap }}"></paper-button>
     </div>

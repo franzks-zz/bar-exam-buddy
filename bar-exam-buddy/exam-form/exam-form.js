@@ -21,6 +21,7 @@ Polymer('exam-form', {
   },
   loadQuestion: function(index) {
     question = this.arrQuestions[index];
+    this.resetSelected();
     this.$.question.textContent = question.question;
 
     labels = this.arrQuestionLabels;
@@ -30,6 +31,16 @@ Polymer('exam-form', {
     labels[rand[1]].label = question.choice1;
     labels[rand[2]].label = question.choice2;
     labels[rand[3]].label = question.choice3;
+
+    if(question.selected) {
+      this.choiceSelected = question.selected; 
+      labels[parseInt(question.selected)].checked = true;
+    }
+  },
+  onChoiceChanged: function(e) {
+    if(this.choiceSelected) {
+      this.arrQuestions[this.questionCurrent].selected = this.choiceSelected;
+    }
   },
   onBtnSubmitAnswerTap: function() {
     if(this.arrQuestionLabels[this.arrRandomChoices[0]].checked) {
@@ -47,6 +58,11 @@ Polymer('exam-form', {
       this.questionCurrent++;
       this.loadQuestion(this.questionCurrent);
     }
+  },
+  resetSelected: function() {
+    this.arrQuestionLabels.forEach(function(label) {
+      label.checked = false;
+    });
   },
   shuffleRandomChoices: function() {
     array = this.arrRandomChoices;
