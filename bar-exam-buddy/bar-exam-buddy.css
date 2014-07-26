@@ -13,6 +13,11 @@
 
 :host /deep/ paper-fab:hover {
   background: #586ACE;
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 :host /deep/ paper-button[raisedButton].colored {
@@ -22,7 +27,11 @@
 
 :host /deep/ paper-button[raisedButton].colored:hover {
   background: #586ACE;
-  color: #fff;
+  -webkit-transition: background-color 250ms linear;
+  -moz-transition: background-color 250ms linear;
+  -o-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 :host /deep/ paper-button[raisedButton].colored #ripple,
