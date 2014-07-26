@@ -1,10 +1,10 @@
 Polymer('exam-form', {
   questionCurrent: 0,
   arrQuestions: [],
-  arrQuestionLabels: [],
+  arrRadioButtons: [],
   arrRandomChoices: [0,1,2,3],
   ready: function() {
-    this.arrQuestionLabels = [
+    this.arrRadioButtons = [
       this.$.choice1,
       this.$.choice2,
       this.$.choice3,
@@ -24,17 +24,17 @@ Polymer('exam-form', {
     this.resetSelected();
     this.$.question.textContent = question.question;
 
-    labels = this.arrQuestionLabels;
+    radios = this.arrRadioButtons;
     this.shuffleRandomChoices();
     rand = this.arrRandomChoices;
-    labels[rand[0]].label = question.correctAnswer;
-    labels[rand[1]].label = question.choice1;
-    labels[rand[2]].label = question.choice2;
-    labels[rand[3]].label = question.choice3;
+    radios[rand[0]].label = question.correctAnswer;
+    radios[rand[1]].label = question.choice1;
+    radios[rand[2]].label = question.choice2;
+    radios[rand[3]].label = question.choice3;
 
     if(question.selected) {
       this.choiceSelected = question.selected; 
-      labels[parseInt(question.selected)].checked = true;
+      radios[parseInt(question.selected)].checked = true;
     }
   },
   onChoiceChanged: function(e) {
@@ -43,7 +43,7 @@ Polymer('exam-form', {
     }
   },
   onBtnSubmitAnswerTap: function() {
-    if(this.arrQuestionLabels[this.arrRandomChoices[0]].checked) {
+    if(this.arrRadioButtons[this.arrRandomChoices[0]].checked) {
       //TODO show visual indicator whether user picked right/wrong choice.
     }
   },
@@ -60,8 +60,8 @@ Polymer('exam-form', {
     }
   },
   resetSelected: function() {
-    this.arrQuestionLabels.forEach(function(label) {
-      label.checked = false;
+    this.arrRadioButtons.forEach(function(radio) {
+      radio.checked = false;
     });
   },
   shuffleRandomChoices: function() {
