@@ -31,6 +31,11 @@ Polymer('exam-form', {
     labels[rand[2]].label = question.choice2;
     labels[rand[3]].label = question.choice3;
   },
+  onBtnSubmitAnswerTap: function() {
+    if(this.arrQuestionLabels[this.arrRandomChoices[0]].checked) {
+      //TODO show visual indicator whether user picked right/wrong choice.
+    }
+  },
   onFabPrevTap: function() {
     if(this.questionCurrent>0) {
       this.questionCurrent--;
