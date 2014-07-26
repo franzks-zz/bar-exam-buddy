@@ -1,12 +1,19 @@
 Polymer('exam-form', {
   questionCurrent: 0,
+  arrQuestions: [],
+  arrQuestionLabels: [],
   ready: function() {
+    this.arrQuestionLabels = [
+      this.$.choice1,
+      this.$.choice2,
+      this.$.choice3,
+      this.$.choice4,
+    ];
     this.$.xhr.request({
       url: 'dummy-questions.json',
       callback: this.onQuestionsLoaded.bind(this)
     });
   },
-  arrQuestions: [],
   onQuestionsLoaded: function(result) {
     this.arrQuestions = eval(result);
     this.loadQuestion(0);
@@ -14,10 +21,12 @@ Polymer('exam-form', {
   loadQuestion: function(index) {
     question = this.arrQuestions[index];
     this.$.question.textContent = question.question;
-    this.$.choice1.label = question.choice1;
-    this.$.choice2.label = question.choice2;
-    this.$.choice3.label = question.choice3;
-    this.$.choice4.label = question.correctAnswer;
+
+    labels = this.arrQuestionLabels;
+    labels[0].label = question.choice1;
+    labels[1].label = question.choice2;
+    labels[2].label = question.choice3;
+    labels[3].label = question.correctAnswer;
   },
   fabPrevOnTap: function() {
     if(this.questionCurrent>0) {
