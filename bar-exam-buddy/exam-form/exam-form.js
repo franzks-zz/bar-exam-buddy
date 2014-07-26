@@ -2,6 +2,7 @@ Polymer('exam-form', {
   questionCurrent: 0,
   arrQuestions: [],
   arrQuestionLabels: [],
+  arrRandomChoices: [0,1,2,3],
   ready: function() {
     this.arrQuestionLabels = [
       this.$.choice1,
@@ -23,10 +24,12 @@ Polymer('exam-form', {
     this.$.question.textContent = question.question;
 
     labels = this.arrQuestionLabels;
-    labels[0].label = question.choice1;
-    labels[1].label = question.choice2;
-    labels[2].label = question.choice3;
-    labels[3].label = question.correctAnswer;
+    this.shuffleRandomChoices();
+    rand = this.arrRandomChoices;
+    labels[rand[0]].label = question.correctAnswer;
+    labels[rand[1]].label = question.choice1;
+    labels[rand[2]].label = question.choice2;
+    labels[rand[3]].label = question.choice3;
   },
   fabPrevOnTap: function() {
     if(this.questionCurrent>0) {
@@ -38,6 +41,15 @@ Polymer('exam-form', {
     if(this.questionCurrent<this.arrQuestions.length-1) {
       this.questionCurrent++;
       this.loadQuestion(this.questionCurrent);
+    }
+  },
+  shuffleRandomChoices: function() {
+    array = this.arrRandomChoices;
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
   },
 });
