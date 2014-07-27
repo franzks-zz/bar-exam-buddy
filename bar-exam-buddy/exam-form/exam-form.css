@@ -27,10 +27,20 @@ paper-radio-button::shadow #radioLabel {
   line-height: 30px;
   border: 3px solid #FFF;
   padding: 5px;
+  -webkit-transition: border 250ms linear;
+  -moz-transition: border 250ms linear;
+  -o-transition: border 250ms linear;
+  -ms-transition: border 250ms linear;
+  transition: border 250ms linear;
 }
 
 paper-radio-button::shadow #radioLabel.correct {
   border-color: #C5E26D;
+  -webkit-transition: border-color 250ms linear;
+  -moz-transition: border-color 250ms linear;
+  -o-transition: border-color 250ms linear;
+  -ms-transition: border-color 250ms linear;
+  transition: border-color 250ms linear;
 }
 
 paper-radio-button::shadow #onRadio {
