@@ -41,7 +41,10 @@ Polymer('exam-form', {
       radios[parseInt(question.selected)].checked = true;
     }
     if(question.answered) {
+      this.setRadioButtonDisabled(true);
       this.highlightCorrectAnswer();
+    } else {
+      this.setRadioButtonDisabled(false);
     }
   },
   onChoiceChanged: function(e) {
@@ -51,6 +54,7 @@ Polymer('exam-form', {
   },
   onBtnSubmitAnswerTap: function() {
     this.highlightCorrectAnswer();
+    this.setRadioButtonDisabled(true);
     question = this.arrQuestions[this.questionCurrent];
     if(!question.answered) {
       question.answered = true;
@@ -74,6 +78,11 @@ Polymer('exam-form', {
       this.questionCurrent++;
       this.loadQuestion(this.questionCurrent);
     }
+  },
+  setRadioButtonDisabled: function(disabled) {
+    this.arrRadioButtons.forEach(function(radio) {
+      radio.disabled = disabled;
+    });
   },
   resetRadioButtonStyles: function() {
     this.arrRadioButtons.forEach(function(radio) {
