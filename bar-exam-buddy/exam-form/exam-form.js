@@ -25,12 +25,14 @@ Polymer('exam-form', {
     this.$.question.textContent = question.question;
 
     radios = this.arrRadioButtons;
-    this.shuffleRandomChoices();
-    rand = this.arrRandomChoices;
-    radios[rand[0]].label = question.correctAnswer;
-    radios[rand[1]].label = question.choice1;
-    radios[rand[2]].label = question.choice2;
-    radios[rand[3]].label = question.choice3;
+    if(!question.choiceOrder) {
+      this.shuffleRandomChoices();
+      question.choiceOrder = this.arrRandomChoices.slice();
+    }
+    radios[question.choiceOrder[0]].label = question.correctAnswer;
+    radios[question.choiceOrder[1]].label = question.choice1;
+    radios[question.choiceOrder[2]].label = question.choice2;
+    radios[question.choiceOrder[3]].label = question.choice3;
 
     if(question.selected) {
       this.choiceSelected = question.selected; 
