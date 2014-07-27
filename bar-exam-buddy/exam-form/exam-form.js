@@ -3,6 +3,8 @@ Polymer('exam-form', {
   arrQuestions: [],
   arrRadioButtons: [],
   arrRandomChoices: [0,1,2,3],
+  numCorrect: 0,
+  numAnswered: 0,
   ready: function() {
     this.arrRadioButtons = [
       this.$.choice1,
@@ -50,7 +52,14 @@ Polymer('exam-form', {
   },
   onBtnSubmitAnswerTap: function() {
     this.highlightCorrectAnswer();
-    this.arrQuestions[this.questionCurrent].answered = true;
+    question = this.arrQuestions[this.questionCurrent];
+    if(!question.answered) {
+      question.answered = true;
+      this.numAnswered++;
+      if(this.arrRadioButtons[question.choiceOrder[0]].checked) {
+        this.numCorrect++;
+      }
+    }
   },
   highlightCorrectAnswer: function() {
     this.arrRadioButtons[this.arrQuestions[this.questionCurrent].choiceOrder[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');

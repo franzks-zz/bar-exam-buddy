@@ -19,6 +19,9 @@
         <paper-fab id="fab-prev-question" class="mini" icon="arrow-back" on-tap="{{ onFabPrevTap }}"></paper-fab>
         <paper-fab id="fab-next-question" class="mini" icon="arrow-forward" on-tap="{{ onFabNextTap }}"></paper-fab>
       </div>
+      <div layout horizontal center>
+        Correct: {{numCorrect}}/{{numAnswered}}
+      </div>
       
       <span id="question"></span>
       <paper-radio-group selected="{{choiceSelected}}">
