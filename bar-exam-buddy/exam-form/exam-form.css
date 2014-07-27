@@ -25,6 +25,12 @@
 
 paper-radio-button::shadow #radioLabel {
   line-height: 30px;
+  border: 3px solid #FFF;
+  padding: 5px;
+}
+
+paper-radio-button::shadow #radioLabel.correct {
+  border-color: #C5E26D;
 }
 
 paper-radio-button::shadow #onRadio {
@@ -33,6 +39,7 @@ paper-radio-button::shadow #onRadio {
 
 paper-radio-button {
   color: #000;
+  border: 1px solid #FFF;
   -webkit-transition: color 250ms linear;
   -moz-transition: color 250ms linear;
   -o-transition: color 250ms linear;

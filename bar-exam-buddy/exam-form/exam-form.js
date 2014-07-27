@@ -21,7 +21,7 @@ Polymer('exam-form', {
   },
   loadQuestion: function(index) {
     question = this.arrQuestions[index];
-    this.resetSelected();
+    this.resetRadioButtonStyles();
     this.$.question.textContent = question.question;
 
     radios = this.arrRadioButtons;
@@ -36,6 +36,10 @@ Polymer('exam-form', {
       this.choiceSelected = question.selected; 
       radios[parseInt(question.selected)].checked = true;
     }
+
+    if(question.answered) {
+      this.highlightCorrectAnswer();
+    }
   },
   onChoiceChanged: function(e) {
     if(this.choiceSelected) {
@@ -43,9 +47,13 @@ Polymer('exam-form', {
     }
   },
   onBtnSubmitAnswerTap: function() {
+    this.highlightCorrectAnswer();
     if(this.arrRadioButtons[this.arrRandomChoices[0]].checked) {
-      //TODO show visual indicator whether user picked right/wrong choice.
+      this.arrQuestions[this.questionCurrent].answered = true;
     }
+  },
+  highlightCorrectAnswer: function() {
+    this.arrRadioButtons[this.arrRandomChoices[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
   },
   onFabPrevTap: function() {
     if(this.questionCurrent>0) {
@@ -59,9 +67,10 @@ Polymer('exam-form', {
       this.loadQuestion(this.questionCurrent);
     }
   },
-  resetSelected: function() {
+  resetRadioButtonStyles: function() {
     this.arrRadioButtons.forEach(function(radio) {
       radio.checked = false;
+      radio.shadowRoot.getElementById("radioLabel").classList.remove('correct');
     });
   },
   shuffleRandomChoices: function() {
