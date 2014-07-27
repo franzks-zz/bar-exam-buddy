@@ -53,7 +53,7 @@ Polymer('exam-form', {
     this.arrQuestions[this.questionCurrent].answered = true;
   },
   highlightCorrectAnswer: function() {
-    this.arrRadioButtons[this.arrRandomChoices[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
+    this.arrRadioButtons[this.arrQuestions[this.questionCurrent].choiceOrder[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
   },
   onFabPrevTap: function() {
     if(this.questionCurrent>0) {
