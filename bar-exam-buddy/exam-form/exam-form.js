@@ -38,7 +38,7 @@ Polymer('exam-form', {
       this.choiceSelected = question.selected; 
       radios[parseInt(question.selected)].checked = true;
     }
-
+    console.log(question.answered);
     if(question.answered) {
       this.highlightCorrectAnswer();
     }
@@ -50,9 +50,7 @@ Polymer('exam-form', {
   },
   onBtnSubmitAnswerTap: function() {
     this.highlightCorrectAnswer();
-    if(this.arrRadioButtons[this.arrRandomChoices[0]].checked) {
-      this.arrQuestions[this.questionCurrent].answered = true;
-    }
+    this.arrQuestions[this.questionCurrent].answered = true;
   },
   highlightCorrectAnswer: function() {
     this.arrRadioButtons[this.arrRandomChoices[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
