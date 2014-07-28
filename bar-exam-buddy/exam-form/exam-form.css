@@ -47,7 +47,8 @@ paper-radio-button::shadow #onRadio {
   background-color: #3e50b4;
 }
 
-paper-radio-button {
+paper-radio-button,
+.dialog-question {
   color: #000;
   border: 1px solid #FFF;
   -webkit-transition: color 250ms linear;
@@ -57,13 +58,15 @@ paper-radio-button {
   transition: color 250ms linear;
 }
 
-paper-radio-button:hover {
+paper-radio-button:hover,
+.dialog-question:hover {
   color: #AAA;
   -webkit-transition: color 250ms linear;
   -moz-transition: color 250ms linear;
   -o-transition: color 250ms linear;
   -ms-transition: color 250ms linear;
   transition: color 250ms linear;
+  cursor: pointer;
 }
 
 #btn-list-questions {
