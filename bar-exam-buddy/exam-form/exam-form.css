@@ -90,6 +90,12 @@ paper-toast#toastWrong {
   background-color: #E21D1D;
 }
 
+paper-toast::shadow .toast-container {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 .dialog-item {
   margin-bottom: 15px;
 }

@@ -12,8 +12,8 @@
 <polymer-element name="exam-form" attributes="onFabBackTap selectedPage selectedHero">
   <template>
     <core-xhr id="xhr"></core-xhr>
-    <paper-toast id="toastCorrect" text="Congratulations, you're correct."></paper-toast>
-    <paper-toast id="toastWrong" text="Unfortunately, you're wrong."></paper-toast>
+    <paper-toast id="toastCorrect" text="Congratulations, you're correct."><core-icon icon="check"></core-icon></paper-toast>
+    <paper-toast id="toastWrong" text="Unfortunately, you're wrong."><core-icon icon="clear"></core-icon></paper-toast>
     <paper-toast id="toastNoAnswer" text="Please select an answer."></paper-toast>
     <link href="exam-form.css" rel="stylesheet">
     
