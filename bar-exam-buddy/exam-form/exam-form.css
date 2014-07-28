@@ -70,3 +70,15 @@ paper-radio-button:hover {
   margin-top: 10px;
 }
 
+paper-toast {
+  font-weight: bold;
+  text-align: center;
+}
+
+paper-toast#toastCorrect {
+  background-color: #669900;
+}
+
+paper-toast#toastWrong {
+  background-color: #E21D1D;
+}
