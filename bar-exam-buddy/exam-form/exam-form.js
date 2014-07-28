@@ -76,6 +76,9 @@ Polymer('exam-form', {
   highlightCorrectAnswer: function() {
     this.arrRadioButtons[this.arrQuestions[this.questionCurrent].choiceOrder[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
   },
+  onBtnListQuestionsTap: function() {
+    //TODO display dialog showing the list of questions and which ones have already been answered
+  },
   onFabPrevTap: function() {
     if(this.questionCurrent>0) {
       this.questionCurrent--;

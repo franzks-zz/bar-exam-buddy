@@ -66,8 +66,12 @@ paper-radio-button:hover {
   transition: color 250ms linear;
 }
 
+#btn-list-questions {
+  margin-right: 5px;
+}
+
 #btn-submit-answer {
-  margin-top: 10px;
+  margin-left: 5px;
 }
 
 paper-toast {
