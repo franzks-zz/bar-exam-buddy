@@ -22,6 +22,7 @@ Polymer('exam-form', {
     this.loadQuestion(0);
   },
   loadQuestion: function(index) {
+    this.questionCurrent = index;
     question = this.arrQuestions[index];
     this.resetRadioButtonStyles();
     this.$.question.textContent = question.question;
@@ -48,6 +49,8 @@ Polymer('exam-form', {
     } else {
       this.setRadioButtonDisabled(false);
     }
+
+    this.$.dialogListQuestions.opened = false;
   },
   onChoiceChanged: function(e) {
     if(this.choiceSelected) {
@@ -77,7 +80,7 @@ Polymer('exam-form', {
     this.arrRadioButtons[this.arrQuestions[this.questionCurrent].choiceOrder[0]].shadowRoot.getElementById("radioLabel").classList.add('correct');
   },
   onBtnListQuestionsTap: function() {
-    //TODO display dialog showing the list of questions and which ones have already been answered
+    this.$.dialogListQuestions.opened = true;
   },
   onFabPrevTap: function() {
     if(this.questionCurrent>0) {
@@ -112,3 +115,9 @@ Polymer('exam-form', {
     }
   },
 });
+
+// Very dirt hack temporarily done because on-tap doesn't accept
+// arguments as of right now
+function load(index) {
+  document.getElementsByTagName('bar-exam-buddy')[0].shadowRoot.getElementsByTagName('exam-form')[0].loadQuestion(index);
+}

@@ -86,3 +86,28 @@ paper-toast#toastCorrect {
 paper-toast#toastWrong {
   background-color: #E21D1D;
 }
+
+.dialog-item {
+  margin-bottom: 15px;
+}
+
+.dialog-item core-icon {
+  margin-right: 10px;
+}
+
+.dialog-index,
+.dialog-question {
+  line-height: 24px;
+}
+
+.dialog-index {
+  margin-right: 10px;
+}
+
+.dialog-question {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}

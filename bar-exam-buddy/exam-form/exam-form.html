@@ -1,6 +1,9 @@
 <link href="../../bower_components/polymer/polymer.html" rel="import">
 <link href="../../bower_components/core-ajax/core-xhr.html" rel="import">
+<link href="../../bower_components/core-icon/core-icon.html" rel="import">
 <link href="../../bower_components/paper-button/paper-button.html" rel="import">
+<link href="../../bower_components/paper-dialog/paper-dialog.html" rel="import">
+<link href="../../bower_components/paper-dialog/paper-dialog-transition.html" rel="import">
 <link href="../../bower_components/paper-fab/paper-fab.html" rel="import">
 <link href="../../bower_components/paper-radio-group/paper-radio-group.html" rel="import">
 <link href="../../bower_components/paper-shadow/paper-shadow.html" rel="import">
@@ -39,6 +42,17 @@
         <paper-button id="btn-submit-answer" class="colored" raisedButton label="SUBMIT ANSWER" on-tap="{{ onBtnSubmitAnswerTap }}"></paper-button>
       </div>
     </div>
+
+    <paper-dialog id="dialogListQuestions" backdrop="true" autoCloseDisabled="true" transition="paper-dialog-transition-bottom">
+      <template repeat="{{ question, i in arrQuestions }}">
+        <div class="dialog-item" layout horizontal center onclick="load({{i}})">
+          <core-icon icon="{{question.answered? 'check-box-outline' : 'check-box-outline-blank'}}"></core-icon>
+          <div class="dialog-index">{{i+1}})</div>
+          <div self-end class="dialog-question">{{ question.question }}</div>
+        </div>
+      </template>
+      <paper-button label="Close" affirmative></paper-button>
+    </paper-dialog>
 
   </template>
   <script type="text/javascript" src="exam-form.js"></script>
