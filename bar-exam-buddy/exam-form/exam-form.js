@@ -39,6 +39,8 @@ Polymer('exam-form', {
     if(question.selected) {
       this.choiceSelected = question.selected; 
       radios[parseInt(question.selected)].checked = true;
+    } else {
+      this.choiceSelected = null;
     }
     if(question.answered) {
       this.setRadioButtonDisabled(true);
@@ -53,18 +55,22 @@ Polymer('exam-form', {
     }
   },
   onBtnSubmitAnswerTap: function() {
-    this.highlightCorrectAnswer();
-    this.setRadioButtonDisabled(true);
-    question = this.arrQuestions[this.questionCurrent];
-    if(!question.answered) {
-      question.answered = true;
-      this.numAnswered++;
-      if(this.arrRadioButtons[question.choiceOrder[0]].checked) {
-        this.numCorrect++;
-        this.$.toastCorrect.show();
-      } else {
-        this.$.toastWrong.show();
+    if(this.choiceSelected) {
+      this.highlightCorrectAnswer();
+      this.setRadioButtonDisabled(true);
+      question = this.arrQuestions[this.questionCurrent];
+      if(!question.answered) {
+        question.answered = true;
+        this.numAnswered++;
+        if(this.arrRadioButtons[question.choiceOrder[0]].checked) {
+          this.numCorrect++;
+          this.$.toastCorrect.show();
+        } else {
+          this.$.toastWrong.show();
+        }
       }
+    } else {
+      this.$.toastNoAnswer.show();
     }
   },
   highlightCorrectAnswer: function() {
