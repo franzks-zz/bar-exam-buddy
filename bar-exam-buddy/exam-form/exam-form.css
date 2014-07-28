@@ -102,6 +102,11 @@ paper-toast::shadow .toast-container {
 
 .dialog-item core-icon {
   margin-right: 10px;
+  color: #E21D1D;
+}
+
+.dialog-item core-icon.correct {
+  color: #669900;
 }
 
 .dialog-index,
