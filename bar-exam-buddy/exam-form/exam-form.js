@@ -66,6 +66,7 @@ Polymer('exam-form', {
         question.answered = true;
         this.numAnswered++;
         if(this.arrRadioButtons[question.choiceOrder[0]].checked) {
+          question.correctlyAnswered = true;
           this.numCorrect++;
           this.$.toastCorrect.show();
         } else {
